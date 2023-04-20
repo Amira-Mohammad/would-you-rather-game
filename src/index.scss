@@ -1,0 +1,38 @@
+// @import "./design-tokens/scss-variables.scss";
+// @import "./design-tokens/css-variables.scss";
+
+$base-color1: #c6538c;
+$base-color2: #71d7b3;
+$base-color3: #72c4d2;
+$white-color: #72c4d2;
+$color-light1: #cddbe4;
+$color-light2: #e1fae3;
+
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.bg-light{
+  background-color:$color-light2 ;
+}
+
+.bg_colors_2{
+  background-color: $base-color2;
+}
+
+.col-center {
+  float: none;
+  margin: 0 auto;
+}

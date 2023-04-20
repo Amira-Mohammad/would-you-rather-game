@@ -1,0 +1,22 @@
+@import '../../index.scss';
+.bgLightColor{
+    color: $base-color2;
+  }
+  .bgLightBackground{
+    background-color:$color-light2;
+  
+  }
+  .btn {
+    color: #fff !important;
+    background-color: $base-color2 !important;
+    border-color:$base-color2 !important;
+}
+
+.baseColor{
+    color: $base-color2;
+}
+
+.col-center {
+    float: none;
+    margin: 0 auto;
+  }

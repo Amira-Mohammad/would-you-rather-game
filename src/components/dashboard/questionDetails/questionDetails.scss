@@ -1,0 +1,6 @@
+@import '../../../index.scss';
+
+.form-check-input:checked {
+    background-color: $base-color2 !important;
+    border-color: $base-color2 !important;
+}
