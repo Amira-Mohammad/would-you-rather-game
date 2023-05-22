@@ -9,31 +9,32 @@ import QuestionDetails from "./components/dashboard/questionDetails/QuestionDeta
 import QuestionPoll from "./components/dashboard/questionPoll/QuestionPoll";
 import { connect } from "react-redux";
 import NotFound from "./components/notFound/NotFound";
-
+let islogin;
+const PrivateRoute = ({ component: Component, ...rest }) => {
+  const user =
+    //props.users.loginUser &&
+    islogin || false;
+  return (
+    <Route
+      {...rest}
+      render={(props) =>
+        !user ? (
+          <Redirect
+            to={{
+              pathname: "/",
+              state: { from: props.location },
+            }}
+          />
+        ) : (
+          //handleChildFunc={handleChildFunc}
+          <Component {...props} user={user} />
+        )
+      }
+    />
+  );
+};
 function App(props) {
-  const PrivateRoute = ({ component: Component, ...rest }) => {
-    const user =
-      //props.users.loginUser &&
-      props.users.loginUser || false;
-    return (
-      <Route
-        {...rest}
-        render={(props) =>
-          !user ? (
-            <Redirect
-              to={{
-                pathname: "/",
-                state: { from: props.location },
-              }}
-            />
-          ) : (
-            //handleChildFunc={handleChildFunc}
-            <Component {...props} user={user} />
-          )
-        }
-      />
-    );
-  };
+  islogin = props.users.loginUser;
   return (
     <div className="App">
       <BrowserRouter basename="/would-you-rather-game">
